@@ -23,7 +23,9 @@ class EmpWageBuilder
                                         empHrs=0;
                         }
                         totalEmpHrs += empHrs;
-                        System.out.println("Total days : " + days + "   Total hours are : " + totalEmpHrs);
+			empWage += empHrs*empRate;
+                        System.out.println("Total days : " + days + "   Total hours are : " + totalEmpHrs
+						+ "   Employee Wage is : " +empWage);
                 }
 	}
 
