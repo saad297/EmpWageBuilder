@@ -6,6 +6,7 @@ class EmpWageBuilder
 	public static void computeEmpWage(String company, int empRate, int numOfDays, int maxHrs) {
 		int empHrs=0;
               	int empWage=0;
+		int totalEmpWage=0;
                 int totalEmpHrs=0;
                 int days=0;
                 while (empHrs <= maxHrs && days < numOfDays)
@@ -23,10 +24,11 @@ class EmpWageBuilder
                                         empHrs=0;
                         }
                         totalEmpHrs += empHrs;
-			empWage += empHrs*empRate;
-                        System.out.println("Total days : " + days + "   Total hours are : " + totalEmpHrs
-						+ "   Employee Wage is : " +empWage);
+			empWage = empHrs * empRate;
+			totalEmpWage += empWage;
+                        System.out.println("Total days : " + days + "   Total hours are : " + totalEmpHrs);
                 }
+		System.out.println("Total Employee Wage for " +company+ " is : " +totalEmpWage);
 	}
 
 	public static void main(String[] args)
