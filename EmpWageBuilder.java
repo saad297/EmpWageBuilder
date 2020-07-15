@@ -65,6 +65,6 @@ public class EmpWageBuilder implements EmpWageInterface
 		builder.addCompanyEmpWage("DMART",20,2,10);
 		builder.addCompanyEmpWage("Reliance",10,4,20);
 		builder.computeEmpWage();
-		System.out.println("Total wage for Dmart : " + builder.getTotalWage("dmart"));
+		System.out.println("Total wage for Dmart : " + builder.getTotalWage("DMART"));
 	}
 }
