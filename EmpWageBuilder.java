@@ -1,5 +1,6 @@
+import java.util.*;
 
-public class EmpWageBuilder
+public class EmpWageBuilder implements EmpWageInterface
 {
 	public static final int IS_FULL_TIME=1;
         public static final int IS_PART_TIME=2;
@@ -12,12 +13,12 @@ public class EmpWageBuilder
 		companyEmpWageArray = new CompanyEmpWage[5];
 	}
 
-	private void addCompanyEmpWage(String company, int empRate, int numOfDays, int maxHrs) {
+	public void addCompanyEmpWage(String company, int empRate, int numOfDays, int maxHrs) {
 		companyEmpWageArray[numOfCompany] = new CompanyEmpWage(company, empRate, numOfDays, maxHrs);
 		numOfCompany++;
 	}
 
-	private void computeEmpWage() {
+	public void computeEmpWage() {
 		for (int i = 0; i < numOfCompany; i++) {
 			companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(companyEmpWageArray[i]));
 			System.out.println(companyEmpWageArray[i]);
@@ -25,7 +26,7 @@ public class EmpWageBuilder
 
 	}
 
-	private int computeEmpWage(CompanyEmpWage companyEmpWage) {
+	public int computeEmpWage(CompanyEmpWage companyEmpWage) {
 		int empHrs=0;
                 int totalEmpHrs=0;
                 int days=0;
