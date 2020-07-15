@@ -10,6 +10,7 @@ public class CompanyEmpWage {
                 EMP_RATE_PER_HOUR = empRate;
                 NUM_OF_WORKING_DAYS = numOfDays;
                 MAX_WORK_HOURS = maxHrs;
+		totalEmpWage=0;
         }
 
         public void setTotalEmpWage(int totalEmpWage) {

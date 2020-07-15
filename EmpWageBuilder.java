@@ -30,6 +30,10 @@ public class EmpWageBuilder implements EmpWageInterface
 
 	}
 
+	public int getTotalWage(String company) {
+		return companyToEmpWageMap.get(company).totalEmpWage;
+	}
+
 	public int computeEmpWage(CompanyEmpWage companyEmpWage) {
 		int empHrs=0;
                 int totalEmpHrs=0;
@@ -61,5 +65,6 @@ public class EmpWageBuilder implements EmpWageInterface
 		builder.addCompanyEmpWage("DMART",20,2,10);
 		builder.addCompanyEmpWage("Reliance",10,4,20);
 		builder.computeEmpWage();
+		System.out.println("Total wage for Dmart : " + builder.getTotalWage("dmart"));
 	}
 }
